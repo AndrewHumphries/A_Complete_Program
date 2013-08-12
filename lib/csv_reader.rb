@@ -15,6 +15,7 @@ class CSVReader
       #convert to a symbol
       new_header.underscore.to_sym
     end
+  end
 
     def create_hash(values)
       h = {}
@@ -26,7 +27,7 @@ class CSVReader
       h
     end
 
-  end
+
 end
 
 class String
