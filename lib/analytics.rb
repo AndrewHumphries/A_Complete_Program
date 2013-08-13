@@ -23,21 +23,21 @@ class Analytics
 
   def run(choice)
     #set local variable "opt" equal to the elements in the @options array that return true for the block in {}
-    #the block says — return a new array comprised of the elements of the @options array that have a :menu_id equal to the provided argument "choice"
-    #then, finally, return the first element of the array that was just created based on the menu_id provided in argument "choice"
+    #the block says — return a new hash = to the elements of the @options array that have a :menu_id equal to the provided argument "choice"
+    #then, finally, return the first element of the hash that was just created based on the menu_id provided in argument "choice"
     opt = @options.select { |o| o[:menu_id] == choice }.first
-    #if no elements of the @options array return for the "choice" argument provided, return print "invalid choice"
+    #if there is no menu_id in the opt hash for the "choice" argument provided, return print "invalid choice"
     if opt.nil? 
       puts "Invalid choice"
-    #if the new array opt has the element :exit included, do what's next — — what is the != here? 
+    #if the new hash opt has the method NOT equal to :exit included, do what's next (!= "not equal")
     elsif opt[:method] != :exit
-      #take the array (opt) in question and runs .send, an object method that invokes the method identified by the symbol passed. 
-      #In this case, that's the method associated with :method in the array opt we created. 
+      #take the hash (opt) in question and runs .send, an object method that invokes the method identified by the symbol passed. 
+      #In this case, that's the method associated with :method in the hash "opt" we created. 
       self.send opt[:method]
       #I don't know what :done is doing...?
       :done
+      #else here is returning the opt hash for which :method = :exit. So it ends.
     else
-      #otherwise, just run the method. How is this different than what we just did for :exit? 
       opt[:method]
     end
   end
