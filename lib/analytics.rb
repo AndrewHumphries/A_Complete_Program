@@ -1,6 +1,6 @@
 class Analytics
   #create getter/setter method for instance variable named "options"
-  attr_accessor :options
+  attr_accessor :options, :areas
   #every time you create an instance of the analytics class, the following happens
   def initialize(areas)
     #the instance variable @areas is set = to the argument "areas" — a collection areas
@@ -103,5 +103,6 @@ class Analytics
       puts "Zip not found"
     end
   end
+end
 
 

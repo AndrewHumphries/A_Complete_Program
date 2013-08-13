@@ -44,8 +44,6 @@ class CSVReader
       end
     end
 
-    end
-
 
 
 end
