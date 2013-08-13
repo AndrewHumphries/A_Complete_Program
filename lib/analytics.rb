@@ -95,7 +95,7 @@ class Analytics
     #if zips is not empty (if the empty? test returns false) then prints a blank spot.
     unless zips.empty? 
       puts ""
-      #then it iterates over the array takes every element it finds and prints them. 
+      #then it iterates over the array takes every element it finds and prints them. (Does this print every value in every hash for that zip?)
       zips.each { |z| puts z }
     else
       puts 
