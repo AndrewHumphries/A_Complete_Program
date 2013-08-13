@@ -28,7 +28,7 @@ class CSVReader
     end
 
     def read
-      #creates a new instance of "File" class, wtaking two arguments — first specifies file name/location, second specifies permissions (read-only)
+      #creates a new instance of "File" class, taking two arguments — first specifies file name/location, second specifies permissions (read-only)
       f = File.new(@fname, 'r')
       #grabs the file's headers and ...? what is readline? 
       self.headers = f.readline
